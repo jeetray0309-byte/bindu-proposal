@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Bindu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ENVELOPE SCREEN -->
+<div id="envelope">
+  <div class="envelope-card">
+    <h2>For Bindu 💌</h2>
+    <p>Tap the seal to open</p>
+    <div class="seal" onclick="openEnvelope()">❤</div>
+  </div>
+</div>
+
+<!-- LOCK SCREEN -->
+<div id="lockScreen">
+  <h2>This space is protected</h2>
+  <p>Password is what you feel… when you think of me.</p>
+
+  <input type="password" id="password" placeholder="Enter password">
+  <button onclick="unlock()">Unlock</button>
+
+  <p id="error"></p>
+</div>
+
+<!-- PROPOSAL SCREEN -->
+<div id="proposal">
+  <div class="page" id="page"></div>
+  <button id="nextBtn" onclick="nextPage()">Next</button>
+</div>
+
+<audio id="flipSound" src="https://assets.mixkit.co/sfx/preview/mixkit-page-flip-1101.mp3"></audio>
+<script src="script.js"></script>
+<!-- heartbeat sound -->
+<audio id="heartBeat" src="https://assets.mixkit.co/sfx/preview/mixkit-heartbeat-2-487.mp3"></audio>
+
+<!-- confetti library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>

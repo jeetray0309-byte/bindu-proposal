@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #f3f0ea;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* ================= ENVELOPE ================= */
+
+#envelope {
+  position: fixed;
+  inset: 0;
+  background: #f3f0ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.envelope-card {
+  width: 320px;
+  height: 420px;
+  background: #fffdf8;
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  animation: float 2s ease-in-out infinite;
+}
+
+.envelope-card h2 {
+  font-family: 'Pacifico', cursive;
+  font-weight: normal;
+}
+
+.envelope-card p {
+  color: #777;
+}
+
+.seal {
+  width: 70px;
+  height: 70px;
+  background: #ff8fab;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ================= LOCK SCREEN ================= */
+
+#lockScreen {
+  width: 320px;
+  height: 420px;
+  background: #fffdf8;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  padding: 25px;
+  text-align: center;
+  display: none;
+}
+
+#lockScreen h2 {
+  font-family: 'Pacifico', cursive;
+}
+
+#lockScreen p {
+  font-size: 14px;
+  color: #777;
+}
+
+#lockScreen input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#lockScreen button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: #ff8fab;
+  color: white;
+  cursor: pointer;
+}
+
+#error {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #ff4d6d;
+}
+
+/* ================= BOOK ================= */
+
+#proposal {
+  width: 320px;
+  height: 420px;
+  background: #fffdf8;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  perspective: 1400px;
+}
+
+/* PAGE */
+.page {
+  flex: 1;
+  background: #fffdf8;
+  border-radius: 10px;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  color: #444;
+
+  transform-origin: left center;
+  transform-style: preserve-3d;
+}
+
+/* REAL PAGE TURN */
+.page.turn {
+  animation: pageTurn 1s ease forwards;
+}
+
+@keyframes pageTurn {
+  0% {
+    transform: rotateY(0deg);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+  }
+  100% {
+    transform: rotateY(-150deg);
+    box-shadow: -30px 0 40px rgba(0,0,0,0.35);
+  }
+}
+
+#nextBtn {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: #ff8fab;
+  color: white;
+  cursor: pointer;
+}
+
+.stamp {
+  font-family: 'Pacifico', cursive;
+  font-size: 36px;
+  color: #ff4d6d;
+}
+/* FORCE START FROM ENVELOPE */
+#envelope {
+  display: flex;
+}
+
+#lockScreen,
+#proposal {
+  display: none;
+}
+#envelope {
+  display: flex;
+}
+
+#lockScreen,
+#proposal {
+  display: none;
+}
