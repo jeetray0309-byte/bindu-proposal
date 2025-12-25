@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Bindu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOCK SCREEN -->
+  <div id="lockScreen">
+    <h2>This space is protected</h2>
+    <p>Password is what you feel… when you think of me.</p>
+
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="unlock()">Unlock</button>
+
+    <p id="error"></p>
+  </div>
+
+  <!-- PROPOSAL SCREEN -->
+  <div id="proposal">
+    <div class="page" id="page"></div>
+    <button id="nextBtn" onclick="nextPage()">Next</button>
+  </div>
+
+  <!-- page flip sound -->
+  <audio id="flipSound" src="https://assets.mixkit.co/sfx/preview/mixkit-page-flip-1101.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
